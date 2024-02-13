@@ -81,10 +81,129 @@ body {
   background: var(--gradient);
   color: #fff;
 }
+.btn_primay:hover{
+  opacity: 0.7;
+}
 .section_title {
   font-weight: 700;
   font-size: 24px;
   color: var(--title);
+}
+/* loader */
+.page-loading-screen {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  z-index: 999;
+  animation: loading-screen-animation 4s forwards;
+}
+
+.loading-screen-logo {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 50%;
+  height: 50%;
+  animation: loading-screen-rotate-and-bounce 3s infinite linear;
+}
+
+.loading-screen-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes loading-screen-animation {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loading-screen-rotate-and-bounce {
+  0% {
+    transform: rotate(0deg) translateY(0px) scale(1);
+  }
+  25% {
+    transform: rotate(720deg) translateY(0px) scale(1.1);
+  }
+  50% {
+    transform: rotate(720deg) translateY(0px) scale(1.2);
+  }
+  75% {
+    transform: rotate(0deg) translateY(0px) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px) scale(1);
+  }
+}
+@keyframes loading-screen-fade-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.page-loading-screen-hide {
+  display: none;
+}
+
+.page-content-show {
+  display: block;
+}
+
+@keyframes loading-screen-animation {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.page-content {
+  display: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.page-loading-screen-hide {
+  animation: fade-out 2s forwards;
+}
+
+.page-content-show {
+  animation: fade-in 2s forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /* Main Css here */
 /* Header */
@@ -309,8 +428,19 @@ header {
   outline: none;
   cursor: pointer;
 }
+.heart-button{
+  border: none;
+}
+.heart-button:focus i:first-child {
+  display: none;
+}
+.heart-button:focus i:last-child {
+  display: inline-block;
+}
+
 .fa-heart {
   color: #9356dc !important;
+  display: none;
 }
 
 /* restaurants */
@@ -320,17 +450,23 @@ header {
 .menuContents {
   background: #fff;
 }
-
-.menu-animation {
+.homepage-animate-div {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 2s ease, transform 2s ease;
+  animation: fadeIn 7s forwards;
+  animation-delay: calc(0.1s * var(--index));
 }
-.menu-animation.animate-complete {
-  opacity: 1;
-  transform: translateY(0);
+.animate-div {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 1s forwards;
+  animation-delay: calc(0.3s * var(--index));
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 #page2-background {
   background-image: url("../img/card-2.png");
   height: 360px;
@@ -359,15 +495,6 @@ header {
   background-size: cover;
   background-position: top center;
 }
-.background-picture-animation {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-.background-picture-animation.animate-complete {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .menu__contents {
   background: #f6f6f6;
@@ -385,44 +512,8 @@ header {
   max-width: 635px;
   margin: auto;
 }
-.head-animation {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 3s ease, transform 3s ease;
-}
-.head-animation.animate-complete {
-  opacity: 1;
-  transform: translateY(0);
-}
 .menu__form_content {
   margin-bottom: 35px;
-}
-.entrees-animation {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 2s ease-out, transform 2s ease-out;
-}
-.entrees-animation.animate-complete {
-  opacity: 1;
-  transform: translateY(0);
-}
-.plats-animation {
-  opacity: 0;
-  transform: translateY(70px);
-  transition: opacity 3.5s ease-out, transform 3s ease-out;
-}
-.plats-animation.animate-complete {
-  opacity: 1;
-  transform: translateY(0);
-}
-.desserts-animation {
-  opacity: 0;
-  transform: translateY(90px);
-  transition: opacity 3.5s ease-out, transform 4s ease-out;
-}
-.desserts-animation.animate-complete {
-  opacity: 1;
-  transform: translateY(0);
 }
 .menu__contents_head h2 {
   text-align: center;
@@ -527,19 +618,20 @@ header {
 .single__form_tick ion-icon {
   font-size: 32px;
 }
-.single__form.checked h3 {
+.single__form:focus h3 {
   transition: padding 0.3s ease, position 0.3s ease;
   padding-right: 45px;
 }
 
-.single__form.checked .single__form_tick {
+.single__form:focus .single__form_tick {
   opacity: 1;
- transform: translateX(0%);
+  transform: translateX(0%);
 }
-.single__form.checked .single__form_text {
-  width: 230px;
+.single__form:focus .single__form_text {
+  width: 200px;
 }
-.single__form.checked h4, .single__form.checked p {
+.single__form:focus .single__form_text h4,
+.single__form:focus .single__form_text p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: clip;
