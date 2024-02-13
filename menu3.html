@@ -20,26 +20,34 @@
           <a href="index.html" class="btn_back">
             <i class="fa fa-long-arrow-left"></i>
           </a>
+          <div class="animate-div" style="--index: 1;">
           <a href="#" class="logo">
             <img src="assets/img/ohmyfood.svg" alt="logo" />
           </a>
+          </div>
         </div>
       </div>
     </header>
     <main>
-      <section class="menu__hero background-picture-animation" id="page3-background">
+      <section class="menu__hero" id="page3-background">
+        <div class="animate-div" style="--index: 2;">
         <div class="container"></div>
+        </div>
       </section>
-      <section class="menuContents menu-animation">
+      <section class="menuContents">
+        <div class="animate-div" style="--index: 3;">
         <div class="container">
           <div class="menu__contents">
-            <div class="menu__contents_head head-animation">
-              <h2>À la française <i class="fa fa-heart-o"></i></h2>
+            <div class="menu__contents_head">
+              <h2>À la française <button type="button" class="heart-button"><i class="fa fa-heart-o"></i>
+                <i class="fa fa-heart" aria-hidden="true"></i></button></h2>
             </div>
             <div class="menu__content__wrapper">
-              <div class="menu__form_content entrees-animation">
+              </div>
+              <div class="menu__form_content">
+                <div class="animate-div" style="--index: 4;">
                 <small>Entrées</small>
-                <div class="single__form">
+                <div class="single__form" tabindex="0">
                   <div class="single__form_text">
                     <h4>Tartare de poulpe acidulé</h4>
                     <p>Aux zestes d'orange</p>
@@ -49,7 +57,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="1">
                   <div class="single__form_text">
                     <h4>Velouté de légumes d'antan</h4>
                     <p>Carotte, panais, topinambour</p>
@@ -59,7 +67,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="2">
                   <div class="single__form_text">
                     <h4>Soupe à l'oignon</h4>
                     <p>Revisitée</p>
@@ -69,10 +77,12 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
+                </div>
               </div>
-              <div class="menu__form_content plats-animation">
+              <div class="menu__form_content">
                 <small>Plats</small>
-                <div class="single__form">
+                <div class="animate-div" style="--index: 4;">
+                <div class="single__form" tabindex="3">
                   <div class="single__form_text">
                     <h4>Coquilles Saint-Jacques</h4>
                     <p>Accompagnées d'une purée de panais</p>
@@ -82,7 +92,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="4">
                   <div class="single__form_text">
                     <h4>Magret de canard</h4>
                     <p>Et parmentier de pommes de terre</p>
@@ -92,7 +102,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="5">
                   <div class="single__form_text">
                     <h4>Pigeonneau d’Ille-et-Vilaine</h4>
                     <p>Sur son lit de gnocchis aux légumes</p>
@@ -102,10 +112,12 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
+                </div>
               </div>
-              <div class="menu__form_content desserts-animation">
+              <div class="menu__form_content">
+                <div class="animate-div" style="--index: 5;">
                 <small>Desserts</small>
-                <div class="single__form">
+                <div class="single__form" tabindex="6">
                   <div class="single__form_text">
                     <h4>Pétales de violettes glacés</h4>
                     <p>Et purée de noisettes</p>
@@ -115,7 +127,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="7">
                   <div class="single__form_text">
                     <h4>Fondant au chocolat</h4>
                     <p>Revisité</p>
@@ -125,7 +137,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="8">
                   <div class="single__form_text">
                     <h4>Millefeuille croustillant</h4>
                     <p>Myrtilles et pâte d’amande</p>
@@ -134,6 +146,7 @@
                   <div class="single__form_tick">
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
+                </div>
                 </div>
               </div>
               <div class="menu__formSubmit">
@@ -173,9 +186,6 @@
         </div>
       </div>
     </footer>
-    <!-- Script -->
     <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
   </body>
 </html>
