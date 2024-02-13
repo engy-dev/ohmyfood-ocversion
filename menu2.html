@@ -20,26 +20,34 @@
           <a href="index.html" class="btn_back">
             <i class="fa fa-long-arrow-left"></i>
           </a>
+          <div class="animate-div" style="--index: 1;">
           <a href="#" class="logo">
             <img src="assets/img/ohmyfood.svg" alt="logo" />
           </a>
+          </div>
         </div>
       </div>
     </header>
     <main>
-      <section class="menu__hero background-picture-animation" id="page2-background">
+      <section class="menu__hero" id="page2-background">
+        <div class="animate-div" style="--index: 2;">
         <div class="container"></div>
+        </div>
       </section>
-      <section class="menuContents menu-animation">
+      <section class="menuContents">
+        <div class="animate-div" style="--index: 3;">
         <div class="container">
           <div class="menu__contents">
-            <div class="menu__contents_head head-animation">
-              <h2>La note enchantée <i class="fa fa-heart-o"></i></h2>
+            <div class="menu__contents_head">
+              <h2>La note enchantée <button type="button" class="heart-button"><i class="fa fa-heart-o"></i>
+                <i class="fa fa-heart" aria-hidden="true"></i></button></h2>
             </div>
             <div class="menu__content__wrapper">
-              <div class="menu__form_content entrees-animation">
+              </div>
+              <div class="menu__form_content">
+                <div class="animate-div" style="--index: 4;">
                 <small>Entrées</small>
-                <div class="single__form">
+                <div class="single__form" tabindex="0">
                   <div class="single__form_text">
                     <h4>Ravioles de foie gras</h4>
                     <p>Accompagnées de leur crème à la truffe</p>
@@ -49,7 +57,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="1">
                   <div class="single__form_text">
                     <h4>Caviar osciètre </h4>
                     <p>Sur blini à la farine de blé noir</p>
@@ -59,7 +67,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="2">
                   <div class="single__form_text">
                     <h4>Homard et espuma de potiron</h4>
                     <p>Marinés aux zestes d'orange</p>
@@ -69,7 +77,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="2">
                   <div class="single__form_text">
                     <h4>Foie gras de canard cuit entier</h4>
                     <p>Confiture de figue et pain toasté</p>
@@ -79,10 +87,12 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
+                </div>
               </div>
-              <div class="menu__form_content plats-animation">
+              <div class="menu__form_content">
                 <small>Plats</small>
-                <div class="single__form">
+                <div class="animate-div" style="--index: 4;">
+                <div class="single__form" tabindex="3">
                   <div class="single__form_text">
                     <h4>Noix de coquilles Saint-Jacques</h4>
                     <p>Sur lit de purée de céleri-rave</p>
@@ -92,7 +102,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="4">
                   <div class="single__form_text">
                     <h4>Langoustine poêlée</h4>
                     <p>Purée de patate douce</p>
@@ -102,7 +112,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="5">
                   <div class="single__form_text">
                     <h4>Mijoté de queue de bœuf </h4>
                     <p>Et riz sauvage aux zestes de citron</p>
@@ -112,10 +122,12 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
+                </div>
               </div>
-              <div class="menu__form_content desserts-animation">
+              <div class="menu__form_content">
+                <div class="animate-div" style="--index: 5;">
                 <small>Desserts</small>
-                <div class="single__form">
+                <div class="single__form" tabindex="6">
                   <div class="single__form_text">
                     <h4>Macaron noisette et chocolat</h4>
                     <p>Glace au caramel brun et sel de Guérande</p>
@@ -125,7 +137,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="7">
                   <div class="single__form_text">
                     <h4>Baba au rhum revisité</h4>
                     <p>Avec son coulis de citron</p>
@@ -135,7 +147,7 @@
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
                 </div>
-                <div class="single__form">
+                <div class="single__form" tabindex="8">
                   <div class="single__form_text">
                     <h4>Tarte au citron meringuée </h4>
                     <p>Déstructurée</p>
@@ -144,6 +156,7 @@
                   <div class="single__form_tick">
                     <ion-icon name="checkmark-circle" aria-label="Favorite"></ion-icon>
                   </div>
+                </div>
                 </div>
               </div>
               <div class="menu__formSubmit">
@@ -183,9 +196,6 @@
         </div>
       </div>
     </footer>
-    <!-- Script -->
     <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
   </body>
 </html>
