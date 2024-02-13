@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oh my Food</title>
+    <!-- css link here -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header__content">
+          <a href="#" class="logo">
+            <img src="assets/img/ohmyfood.svg" alt="logo" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="location__bar">
+          <span><i class="fa fa-map-marker"></i></span>
+          <p>Paris, Belleville</p>
+        </div>
+        <div class="container">
+          <div class="hero__content">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>
+              Découvrez des restaurants d'exception, sélectionnés par nos soins.
+            </p>
+            <a href="#" class="btn btn_primay">Explorer nos restaurants</a>
+          </div>
+        </div>
+      </section>
+      <section class="fonction">
+        <div class="container">
+          <div class="fonction__wrapper">
+            <h2 class="section_title">Fonctionnement</h2>
+            <div class="fonction__filter">
+              <div class="single__filter">
+                <a href="#">
+                  <span><i class="fa fa-mobile"></i></span>
+                  Choisissez un restaurant
+                </a>
+              </div>
+              <div class="single__filter">
+                <a href="#">
+                  <span><i class="fa fa-list-ul"></i></span>
+                  Composez votre menu
+                </a>
+              </div>
+              <div class="single__filter">
+                <a href="#">
+                  <span><i class="fa fa-home"></i></span>
+                  Dégustez au restaurant
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="restaurants">
+        <div class="container">
+          <div class="restaurants__wrapper">
+            <h2 class="section_title">Restaurants</h2>
+            <!-- <i class="fa fa-heart"></i> -->
+            <div class="restaurant__items">
+              <div class="restaurant__single" data-restaurant="1">
+                <div class="card__thumb">
+                  <img src="assets/img/card-1.png" alt="thumb" />
+                </div>
+                <div class="card__text">
+                  <div class="card__textLeft">
+                    <h4>La palette du goût</h4>
+                    <p>Ménilmontant</p>
+                  </div>
+                  <div class="card__textRight">
+                    <button type="button"><i class="fa fa-heart-o"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="restaurant__single" data-restaurant="2">
+                <div class="card__thumb">
+                  <img src="assets/img/card-2.png" alt="thumb" />
+                </div>
+                <div class="card__text">
+                  <div class="card__textLeft">
+                    <h4>La note enchantée</h4>
+                    <p>Charonne</p>
+                  </div>
+                  <div class="card__textRight">
+                    <button type="button"><i class="fa fa-heart-o"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="restaurant__single" data-restaurant="3">
+                <div class="card__thumb">
+                  <img src="assets/img/card-3.png" alt="thumb" />
+                </div>
+                <div class="card__text">
+                  <div class="card__textLeft">
+                    <h4>À la française</h4>
+                    <p>Cité Rouge</p>
+                  </div>
+                  <div class="card__textRight">
+                    <button type="button"><i class="fa fa-heart-o"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="restaurant__single" data-restaurant="4">
+                <div class="card__thumb">
+                  <img src="assets/img/card-4.png" alt="thumb" />
+                </div>
+                <div class="card__text">
+                  <div class="card__textLeft">
+                    <h4>Le délice des sens</h4>
+                    <p>Folie-Méricourt</p>
+                  </div>
+                  <div class="card__textRight">
+                    <button type="button"><i class="fa fa-heart-o"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer_nav">
+            <ul>
+              <li>
+                <a href="#">
+                  <span><i class="fa fa-cutlery"></i></span>
+                  Proposer un restaurant
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>
+                    <i class="fa fa-handshake-o"></i>
+                  </span>
+                  Devenir partenaire
+                </a>
+              </li>
+              <li><a href="#">Mentions légales</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="footer__logo">
+              <a href="#"> ohmyfood </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
