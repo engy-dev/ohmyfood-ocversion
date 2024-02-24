@@ -6,6 +6,9 @@
   nav {
     display: block !important;
   }
+  .single__form:focus h3 {
+    padding-right: 55px;
+  }
 }
 /* Media query for small desktops */
 @media (min-width: 992px) {
@@ -14,7 +17,7 @@
   }
   .single__form:hover h3 {
     transition: padding 0.3s ease, position 0.3s ease;
-    padding-right: 53px;
+    padding-right: 55px;
   }
   
   .single__form:hover .single__form_tick {
@@ -28,7 +31,7 @@
   .single__form:hover .single__form_text p {
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: clip;
+    text-overflow: ellipsis;
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
     transition: width 0.5s ease;
   }
@@ -38,12 +41,15 @@
 }
 /* Media query for medium desktops */
 @media (min-width: 1200px) {
+  .single__form:focus h3 {
+    padding-right: 55px;
+  }
   .container {
     max-width: 1140px;
   }
   .single__form:hover h3 {
     transition: padding 0.3s ease, position 0.3s ease;
-    padding-right: 45px;
+    padding-right: 55px;
   }
   
   .single__form:hover .single__form_tick {
@@ -51,18 +57,18 @@
     transform: translateX(0%);
   }
   .single__form:hover .single__form_text {
-    width: 300px;
+    width: 220px;
   }
   .single__form:hover .single__form_text h4,
   .single__form:hover .single__form_text p {
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: clip;
+    text-overflow: ellipsis;
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
     transition: width 0.5s ease;
   }
   .single__form:focus .single__form_text {
-    width: 300px;
+    width: 220px;
   }
 }
 
@@ -70,7 +76,7 @@
 @media screen and (max-width: 1200px) {
   .single__form:hover h3 {
     transition: padding 0.3s ease, position 0.3s ease;
-    padding-right: 45px;
+    padding-right: 55px;
   }
   
   .single__form:hover .single__form_tick {
@@ -78,25 +84,25 @@
     transform: translateX(0%);
   }
   .single__form:hover .single__form_text {
-    width: 300px;
+    width: 220px;
   }
   .single__form:hover .single__form_text h4,
   .single__form:hover .single__form_text p {
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: clip;
+    text-overflow: ellipsis;
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
     transition: width 0.5s ease;
   }
   
   .single__form:focus .single__form_text {
-    width: 298px;
+    width: 220px;
   }
 }
 @media screen and (max-width: 992px) {
   .single__form:hover h3 {
     transition: padding 0.3s ease, position 0.3s ease;
-    padding-right: 45px;
+    padding-right: 55px;
   }
   
   .single__form:hover .single__form_tick {
@@ -104,19 +110,19 @@
     transform: translateX(0%);
   }
   .single__form:hover .single__form_text {
-    width: 300px;
+    width: 220px;
   }
   .single__form:hover .single__form_text h4,
   .single__form:hover .single__form_text p {
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: clip;
+    text-overflow: ellipsis;
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
     transition: width 0.5s ease;
   }
   
   .single__form:focus .single__form_text {
-    width: 298px;
+    width: 220px;
   }
   .fonction__filter {
     /* -ms-grid-columns: (1fr) [2]; */
@@ -155,7 +161,7 @@
 }
 @media screen and (max-width: 767px) {
   .single__form:focus .single__form_text {
-    width: 280px;
+    width: 120px;
   }
   .fonction {
     justify-content: center;
@@ -193,7 +199,7 @@
     display: flex;
   }
   .single__form:focus .single__form_text {
-    width: 200px;
+    width: 120px;
   }
   .logo {
     height: 28px;

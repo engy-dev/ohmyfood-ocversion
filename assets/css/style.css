@@ -391,7 +391,11 @@ header {
   box-shadow: 0px 4px 15px 0px #0000001a;
   border-radius: 15px;
 }
+.restaurant__single a {
+  display:contents;
+}
 .card__thumb {
+  position: relative;
   height: 180px;
   width: 100%;
 }
@@ -402,13 +406,23 @@ header {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
+.nouveau-badge {
+  position: absolute;
+  right: 3%;
+  top: 1%;
+  background-color: #99E2D0;
+  color: #008766;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+}
 .card__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-between;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-column-gap: 15px;
   -moz-column-gap: 15px;
   column-gap: 15px;
@@ -422,6 +436,9 @@ header {
 .card__text p {
   font-size: 17px;
 }
+.card__textLeft {
+  width: 100%;
+}
 .card__textRight button {
   background: transparent;
   font-size: 24px;
@@ -430,25 +447,16 @@ header {
   outline: none;
   cursor: pointer;
 }
-
 .heart-button {
-  pointer-events: none;
   border: none;
-  position: relative;
+  background-color: transparent;
+  padding: 0;
   overflow: hidden;
 }
 
-.heart-button i {
-  pointer-events: all;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  opacity: 0;
-  transform: scale(0);
-  animation: fill-heart 0.5s forwards;
+
+.heart-button i:last-child {
+  animation-delay: 0.25s;
 }
 
 @keyframes fill-heart {
@@ -456,8 +464,16 @@ header {
     transform: scale(0);
     opacity: 0;
   }
+  25% {
+    transform: scale(0.3);
+    opacity: 0.75;
+  }
   50% {
-    transform: scale(1.5);
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(0.75);
     opacity: 1;
   }
   100% {
@@ -466,26 +482,31 @@ header {
   }
 }
 
-.heart-button:focus i {
+.heart-button:focus i:first-child {
   animation: none;
-  opacity: 1;
+  display: none;
   transform: scale(1);
 }
 
-.heart-button i:first-child {
-  animation-delay: 0.25s;
+.heart-button:focus i:last-child {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: #9356dc;
+  opacity: 0;
+  transform: scale(0);
+  animation: fill-heart 0.5s forwards;
+  opacity: 1;
+  transform: scale(1);
 }
-
-.heart-button i:last-child {
-  animation-delay: 0.5s;
-}
-
 
 .fa-heart {
   color: #9356dc !important;
   display: none;
 }
-
 /* restaurants */
 
 /* For Menu Page */
