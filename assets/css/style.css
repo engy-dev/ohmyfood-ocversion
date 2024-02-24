@@ -63,6 +63,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: var(--pragraph);
+  max-width: 2440px;
 }
 /* Common Css here */
 .container {
@@ -429,15 +430,56 @@ header {
   outline: none;
   cursor: pointer;
 }
-.heart-button{
+
+.heart-button {
+  pointer-events: none;
   border: none;
+  position: relative;
+  overflow: hidden;
 }
-.heart-button:focus i:first-child {
-  display: none;
+
+.heart-button i {
+  pointer-events: all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  animation: fill-heart 0.5s forwards;
 }
-.heart-button:focus i:last-child {
-  display: inline-block;
+
+@keyframes fill-heart {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
+
+.heart-button:focus i {
+  animation: none;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.heart-button i:first-child {
+  animation-delay: 0.25s;
+}
+
+.heart-button i:last-child {
+  animation-delay: 0.5s;
+}
+
 
 .fa-heart {
   color: #9356dc !important;
@@ -621,7 +663,7 @@ header {
 }
 .single__form:focus h3 {
   transition: padding 0.3s ease, position 0.3s ease;
-  padding-right: 45px;
+  padding-right: 53px;
 }
 
 .single__form:focus .single__form_tick {
@@ -635,7 +677,7 @@ header {
 .single__form:focus .single__form_text p {
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: clip;
+  text-overflow: ellipsis;
   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
   transition: width 0.5s ease;
 }

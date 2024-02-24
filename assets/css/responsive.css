@@ -14,7 +14,7 @@
   }
   .single__form:hover h3 {
     transition: padding 0.3s ease, position 0.3s ease;
-    padding-right: 45px;
+    padding-right: 53px;
   }
   
   .single__form:hover .single__form_tick {
@@ -157,6 +157,10 @@
   .single__form:focus .single__form_text {
     width: 280px;
   }
+  .fonction {
+    justify-content: center;
+    display: flex;
+  }
   .fonction__filter {
     /* -ms-grid-columns: (1fr) [1]; */
     grid-template-columns: repeat(1, 1fr);
@@ -184,6 +188,10 @@
   }
 }
 @media screen and (max-width: 576px) {
+  .fonction {
+    justify-content: center;
+    display: flex;
+  }
   .single__form:focus .single__form_text {
     width: 200px;
   }
