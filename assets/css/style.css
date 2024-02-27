@@ -66,6 +66,11 @@ body {
   max-width: 2440px;
 }
 /* Common Css here */
+.header_logo {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .container {
   width: 100%;
   padding-right: 15px;
@@ -409,7 +414,7 @@ header {
 .nouveau-badge {
   position: absolute;
   right: 3%;
-  top: 1%;
+  top: 4%;
   background-color: #99E2D0;
   color: #008766;
   padding: 5px 10px;
@@ -672,17 +677,18 @@ header {
   font-weight: 300;
   color: var(--title);
 }
-.single__form h3 {
+
+.single__form_tick ion-icon {
+  font-size: 32px;
+}
+.price {
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
   color: var(--title);
 }
 
-.single__form_tick ion-icon {
-  font-size: 32px;
-}
-.single__form:focus h3 {
+.single__form:focus .price{
   transition: padding 0.3s ease, position 0.3s ease;
   padding-right: 53px;
 }
