@@ -153,7 +153,7 @@
     transform: translateX(0%);
   }
   .single__form:hover .single__form_text {
-    width: 220px;
+    width: 300px;
   }
   .single__form:hover .single__form_text h4,
   .single__form:hover .single__form_text p {
@@ -165,7 +165,7 @@
   }
   
   .single__form:focus .single__form_text {
-    width: 220px;
+    width: 300px;
   }
   .fonction__filter {
     /* -ms-grid-columns: (1fr) [2]; */
@@ -205,7 +205,7 @@
 @media screen and (max-width: 767px) {
   
   .single__form:focus .single__form_text {
-    width: 120px;
+    width: 250px;
   }
   .fonction {
     justify-content: center;

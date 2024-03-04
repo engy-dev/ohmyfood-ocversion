@@ -700,7 +700,7 @@ header {
   transform: translateX(0%);
 }
 .single__form:focus .single__form_text {
-  width: 150px;
+  width: 100px;
 }
 .single__form:focus .single__form_text h4,
 .single__form:focus .single__form_text p {
