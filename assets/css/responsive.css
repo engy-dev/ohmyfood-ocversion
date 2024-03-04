@@ -78,7 +78,7 @@
     transform: translateX(0%);
   }
   .single__form:hover .single__form_text {
-    width: 220px;
+    width: 380px;
   }
   .single__form:hover .single__form_text h4,
   .single__form:hover .single__form_text p {
@@ -89,7 +89,7 @@
     transition: width 0.5s ease;
   }
   .single__form:focus .single__form_text {
-    width: 220px;
+    width: 380px;
   }
 }
 
@@ -116,7 +116,7 @@
     transform: translateX(0%);
   }
   .single__form:hover .single__form_text {
-    width: 220px;
+    width: 300px;
   }
   .single__form:hover .single__form_text h4,
   .single__form:hover .single__form_text p {
@@ -128,7 +128,7 @@
   }
   
   .single__form:focus .single__form_text {
-    width: 220px;
+    width: 300px;
   }
 }
 @media screen and (max-width: 992px) {
