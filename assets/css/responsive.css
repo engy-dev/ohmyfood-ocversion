@@ -12,6 +12,17 @@
 }
 /* Media query for small desktops */
 @media (min-width: 992px) {
+  .restaurant__items {
+    padding-top: 30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 50px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
   .container {
     max-width: 960px;
   }
@@ -40,6 +51,17 @@
 }
 /* Media query for medium desktops */
 @media (min-width: 1200px) {
+  .restaurant__items {
+    padding-top: 30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 50px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
   .single__form:focus .price {
     padding-right: 55px;
   }
@@ -73,6 +95,17 @@
 
 /* Max Screen size */
 @media screen and (max-width: 1200px) {
+  .restaurant__items {
+    padding-top: 30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 50px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
   .single__form:hover .price {
     transition: padding 0.3s ease, position 0.3s ease;
     padding-right: 55px;
@@ -99,6 +132,17 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .restaurant__items {
+    padding-top: 30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 50px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
   .single__form:hover .price {
     transition: padding 0.3s ease, position 0.3s ease;
     padding-right: 55px;
@@ -159,6 +203,7 @@
   }
 }
 @media screen and (max-width: 767px) {
+  
   .single__form:focus .single__form_text {
     width: 120px;
   }
@@ -172,7 +217,10 @@
     max-width: 350px;
     padding-left: 30px;
   }
+
   .restaurant__items {
+    -ms-grid-columns: 1fr 50px 1fr;
+    grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
